@@ -25,16 +25,6 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'install'
     artifactoryResolverService: 'hts2'
-    targetResolveReleaseRepo: 'libs-release'
-    targetResolveSnapshotRepo: 'libs-snapshot'
-    artifactoryDeployService: 'hts2'
-    targetDeployReleaseRepo: 'libs-release-local'
-    targetDeploySnapshotRepo: 'libs-snapshot-local'
-- task: ArtifactoryMaven@2
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'install'
-    artifactoryResolverService: 'hts2'
     targetResolveReleaseRepo: 'hari-libs-release'
     targetResolveSnapshotRepo: 'hari-libs-snapshot'
     artifactoryDeployService: 'hts2'
