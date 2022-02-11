@@ -30,3 +30,8 @@ steps:
     artifactoryDeployService: 'hts2'
     targetDeployReleaseRepo: 'hari-libs-release-local'
     targetDeploySnapshotRepo: 'hari-libs-snapshot-local'
+- task: ArtifactoryPublishBuildInfo@1
+  inputs:
+    artifactoryService: 'hts2'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
