@@ -8,7 +8,14 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+- task: ArtifactoryToolsInstaller@1
+  inputs:
+    artifactoryService: 'hts2'
+    cliInstallationRepo: 'jfrog-cli'
+    installCustomVersion: true
+    cliVersion: '$(1.53.0)'
+    installExtractors: true
+    extractorsInstallationRepo: 'extractors'
 steps:
 - task: Maven@3
   inputs:
