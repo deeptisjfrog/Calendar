@@ -17,7 +17,6 @@ steps:
     cliVersion: '$(1.53.0)'
     installExtractors: true
     extractorsInstallationRepo: 'extractors'
-steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
